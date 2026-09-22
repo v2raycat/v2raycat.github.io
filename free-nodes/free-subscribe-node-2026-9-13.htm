@@ -362,19 +362,14 @@ Linux: ~/.config/clash/config.yaml
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 如何通过节点测速选择最优线路？</h5></div>
+    <div class="panel-heading"><h5>Quantumult X 可以用脚本自动切换节点吗？</h5></div>
     <div class="panel-body">
-        Matsuri 会定期测速节点延迟和丢包率，结合策略组自动选择延迟低、稳定性高的节点。这样可以提升网页、视频和游戏访问速度，减少掉线和卡顿，优化整体体验。<hr />    </div>
+        可以。Quantumult X 支持通过脚本逻辑判断网络延迟或连接失败情况，并自动切换节点。用户可以编写自定义 JS 规则，从而实现智能代理与按需分流，适合高级用户使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 全局代理与规则代理的区别是什么？</h5></div>
+    <div class="panel-heading"><h5>Trojan 的证书配置错误会导致什么问题？</h5></div>
     <div class="panel-body">
-        全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用或 IP 走节点，优化带宽利用和网络效率，根据不同需求选择使用模式。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的节点测速结果能影响策略组吗？</h5></div>
-    <div class="panel-body">
-        可以。Matsuri 会将延迟最低的节点自动标记为优先节点，结合策略组，程序会优先选择最佳节点处理流量，保证访问速度和连接稳定性。<hr />    </div>
+        如果 TLS 证书无效或域名不匹配，Trojan 客户端将无法建立安全连接，导致节点无法使用。需要确保证书有效、域名正确，才能保证正常访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式能在移动网络下提高稳定性吗？</h5></div>
@@ -392,6 +387,21 @@ Linux: ~/.config/clash/config.yaml
         全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用、IP 或端口走节点，可优化带宽使用和访问效率，根据需求灵活选择模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 如何通过节点测速选择最优线路？</h5></div>
+    <div class="panel-body">
+        Matsuri 会定期测速节点延迟和丢包率，结合策略组自动选择延迟低、稳定性高的节点。这样可以提升网页、视频和游戏访问速度，减少掉线和卡顿，优化整体体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 的节点测速结果能影响策略组吗？</h5></div>
+    <div class="panel-body">
+        可以。Matsuri 会将延迟最低的节点自动标记为优先节点，结合策略组，程序会优先选择最佳节点处理流量，保证访问速度和连接稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 全局代理与规则代理的区别是什么？</h5></div>
+    <div class="panel-body">
+        全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用或 IP 走节点，优化带宽利用和网络效率，根据不同需求选择使用模式。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>何时应选择 VLess 而非 Vmess？</h5></div>
     <div class="panel-body">
         若追求更轻量、高性能的连接且采用外部 TLS 或 XTLS 进行加密，建议选择 VLess。VLess 去除了内嵌加密，能更好配合现代传输（XTLS/Reality）实现更低延迟与更好扩展性。<hr />    </div>
@@ -399,17 +409,7 @@ Linux: ~/.config/clash/config.yaml
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan-Go 的多路复用（mux）如何开启？</h5></div>
     <div class="panel-body">
-        Trojan-Go 在配置文件中通过启用 mux 参数即可实现多路复用。此功能允许多个连接共享同一隧道，减少握手延迟并提升整体传输效率，尤其在移动网络中表现出色。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 可以用脚本自动切换节点吗？</h5></div>
-    <div class="panel-body">
-        可以。Quantumult X 支持通过脚本逻辑判断网络延迟或连接失败情况，并自动切换节点。用户可以编写自定义 JS 规则，从而实现智能代理与按需分流，适合高级用户使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的证书配置错误会导致什么问题？</h5></div>
-    <div class="panel-body">
-        如果 TLS 证书无效或域名不匹配，Trojan 客户端将无法建立安全连接，导致节点无法使用。需要确保证书有效、域名正确，才能保证正常访问。    </div>
+        Trojan-Go 在配置文件中通过启用 mux 参数即可实现多路复用。此功能允许多个连接共享同一隧道，减少握手延迟并提升整体传输效率，尤其在移动网络中表现出色。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -457,16 +457,16 @@ Linux: ~/.config/clash/config.yaml
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-1.htm" title="V2ray Cat节点 | 9月1日20.5M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 9月1日20.5M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-windows-2026-9-3.htm" title="V2ray Cat节点 | 9月3日23M/S|免费V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 9月3日23M/S|免费V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-13.htm" title="V2ray Cat节点 | 8月13日20.5M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月13日20.5M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-10-free-clash.htm" title="V2ray Cat节点 | 8月10日19.8M/S|免费Singbox节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月10日19.8M/S|免费Singbox节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-8-29.htm" title="V2ray Cat节点 | 8月29日20.5M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月29日20.5M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-6-free-ssr-subscribe.htm" title="V2ray Cat节点 | 8月6日20.1M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月6日20.1M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-8-31.htm" title="V2ray Cat节点 | 8月31日20.9M/S|免费SSR节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月31日20.9M/S|免费SSR节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-8-27.htm" title="V2ray Cat节点 | 8月27日20M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月27日20M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-18-free-shadowrocket-node.htm" title="V2ray Cat节点 | 8月18日21.6M/S|免费Clash节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月18日21.6M/S|免费Clash节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-14-node-share.htm" title="V2ray Cat节点 | 8月14日20.3M/S|免费Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月14日20.3M/S|免费Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-9.htm" title="V2ray Cat节点 | 8月9日20.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月9日20.4M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-23.htm" title="V2ray Cat节点 | 8月23日18.8M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月23日18.8M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-22-clash-node.htm" title="V2ray Cat节点 | 9月22日22.1M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 9月22日22.1M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-clash-node-daily-updates.htm" title="V2ray Cat节点 | 9月12日22.7M/S|免费SSR节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 9月12日22.7M/S|免费SSR节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-16-clash-v2ray-ss-ssr.htm" title="V2ray Cat节点 | 9月16日18.3M/S|免费Clash节点/Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 9月16日18.3M/S|免费Clash节点/Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-v2ray.htm" title="V2ray Cat节点 | 9月4日20.7M/S|免费Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 9月4日20.7M/S|免费Singbox节点/Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-21.htm" title="V2ray Cat节点 | 8月21日21.3M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月21日21.3M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-16-free-clash.htm" title="V2ray Cat节点 | 8月16日18M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月16日18M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-8-29.htm" title="V2ray Cat节点 | 8月29日20.5M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">V2ray Cat节点 | 8月29日20.5M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -478,7 +478,7 @@ Linux: ~/.config/clash/config.yaml
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
